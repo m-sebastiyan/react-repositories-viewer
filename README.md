@@ -7,8 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [TSLint](https://palantir.github.io/tslint/ "TSLint") & [Prettier](https://prettier.io/ "Prettier") - for linting
 
 ## Prerequisites
-You need to [create](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token "create") & provide the Github API personal token to  `.env` file
-It must be stored in `REACT_APP_GITHUB_ACCESS_TOKEN`
+You need to [create](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token "create") & provide the Github API personal token to  `.env` file, it must be stored in `REACT_APP_GITHUB_ACCESS_TOKEN`
 
 ## Available Scripts
 
