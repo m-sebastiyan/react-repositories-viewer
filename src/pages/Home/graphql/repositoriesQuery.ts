@@ -2,6 +2,7 @@ import { useQuery, gql } from '@apollo/client'
 
 export interface Repository {
   url: string
+  forkCount: number
   stargazers: {
     totalCount: number
   }
@@ -32,6 +33,7 @@ const REPOSITORIES_QUERY = gql`
         repo: node {
           ... on Repository {
             url
+            forkCount
             stargazers {
               totalCount
             }

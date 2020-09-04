@@ -14,6 +14,7 @@ const Home = () => {
         ({
           repo: {
             url,
+            forkCount,
             stargazers: { totalCount },
           },
         }: {
@@ -21,7 +22,7 @@ const Home = () => {
         }) => (
           <div key={url}>
             <p>
-              {url}: {totalCount}
+              {url}: {totalCount}: {forkCount}
             </p>
           </div>
         )
