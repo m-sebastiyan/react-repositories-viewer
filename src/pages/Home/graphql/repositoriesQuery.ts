@@ -26,6 +26,7 @@ interface RepositorySearchVars {
   last: number
 }
 
+// Does the search by react topic via the Github API
 const REPOSITORIES_QUERY = gql`
   query {
     search(type: REPOSITORY, query: "topic:react", last: 50) {

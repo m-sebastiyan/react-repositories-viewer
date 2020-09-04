@@ -25,6 +25,6 @@ const RepositoriesTable = ({
 }: {
   data: { repo: Repository }[] | undefined
   isLoading: boolean
-}) => <Table columns={columns} dataSource={data} loading={isLoading} pagination={false} />
+}) => <Table bordered={true} columns={columns} dataSource={data} loading={isLoading} />
 
 export default RepositoriesTable
