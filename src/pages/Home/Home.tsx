@@ -1,34 +1,12 @@
 import React from 'react'
 
-import repositoriesQuery, { Repository } from './graphql/repositoriesQuery'
+import repositoriesQuery from './graphql/repositoriesQuery'
+import RepositoriesTable from './components/Table'
 
 const Home = () => {
-  const { loading, error, data } = repositoriesQuery()
+  const { loading, data } = repositoriesQuery()
 
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error :(</p>
-
-  return (
-    <div>
-      {data?.search?.repos.map(
-        ({
-          repo: {
-            url,
-            forkCount,
-            stargazers: { totalCount },
-          },
-        }: {
-          repo: Repository
-        }) => (
-          <div key={url}>
-            <p>
-              {url}: {totalCount}: {forkCount}
-            </p>
-          </div>
-        )
-      )}
-    </div>
-  )
+  return <RepositoriesTable data={data?.search?.repos} isLoading={loading} />
 }
 
 export default Home
